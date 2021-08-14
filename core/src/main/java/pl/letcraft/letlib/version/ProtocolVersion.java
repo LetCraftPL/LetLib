@@ -57,94 +57,40 @@ public enum ProtocolVersion {
     }
 
     public static ProtocolVersion fromMinecraftVersion(@NotNull final String version) {
-        switch (version) {
-            case "1.17.1":
-                return ProtocolVersion.v1_17_1;
-            case "1.17":
-                return ProtocolVersion.v1_17;
-            case "1.16.5":
-            case "1.16.4":
-                return ProtocolVersion.v1_16_4;
-            case "1.16.3":
-                return ProtocolVersion.v1_16_3;
-            case "1.16.2":
-                return ProtocolVersion.v1_16_2;
-            case "1.16.1":
-                return ProtocolVersion.v1_16_1;
-            case "1.16":
-                return ProtocolVersion.v1_16;
-            case "1.15.2":
-                return ProtocolVersion.v1_15_2;
-            case "1.15.1":
-                return ProtocolVersion.v1_15_1;
-            case "1.15":
-                return ProtocolVersion.v1_15;
-            case "1.14.4":
-                return ProtocolVersion.v1_14_4;
-            case "1.14.3":
-                return ProtocolVersion.v1_14_3;
-            case "1.14.2":
-                return ProtocolVersion.v1_14_2;
-            case "1.14.1":
-                return ProtocolVersion.v1_14_1;
-            case "1.14":
-                return ProtocolVersion.v1_14;
-            case "1.13.2":
-                return ProtocolVersion.v1_13_2;
-            case "1.13.1":
-                return ProtocolVersion.v1_13_1;
-            case "1.13":
-                return ProtocolVersion.v1_13;
-            case "1.12.2":
-                return ProtocolVersion.v1_12_2;
-            case "1.12.1":
-                return ProtocolVersion.v1_12_1;
-            case "1.12":
-                return ProtocolVersion.v1_12;
-            case "1.11.2":
-            case "1.11.1":
-                return ProtocolVersion.v1_11_1;
-            case "1.11":
-                return ProtocolVersion.v1_11;
-            case "1.10.2":
-            case "1.10.1":
-            case "1.10":
-                return ProtocolVersion.v1_10;
-            case "1.9.4":
-            case "1.9.3":
-                return ProtocolVersion.v1_9_3;
-            case "1.9.2":
-                return ProtocolVersion.v1_9_2;
-            case "1.9.1":
-                return ProtocolVersion.v1_9_1;
-            case "1.9":
-                return ProtocolVersion.v1_9;
-            case "1.8.9":
-            case "1.8.8":
-            case "1.8.7":
-            case "1.8.6":
-            case "1.8.5":
-            case "1.8.4":
-            case "1.8.3":
-            case "1.8.2":
-            case "1.8.1":
-            case "1.8":
-                return ProtocolVersion.v1_8;
-            case "1.7.10":
-            case "1.7.9":
-            case "1.7.8":
-            case "1.7.7":
-            case "1.7.6":
-                return ProtocolVersion.v1_7_6;
-            case "1.7.5":
-            case "1.7.4":
-            case "1.7.3":
-            case "1.7.2":
-                return ProtocolVersion.v1_7_2;
-            default:
-                return ProtocolVersion.UNKNOWN;
-
-        }
+        return switch (version) {
+            case "1.17.1" -> ProtocolVersion.v1_17_1;
+            case "1.17" -> ProtocolVersion.v1_17;
+            case "1.16.5", "1.16.4" -> ProtocolVersion.v1_16_4;
+            case "1.16.3" -> ProtocolVersion.v1_16_3;
+            case "1.16.2" -> ProtocolVersion.v1_16_2;
+            case "1.16.1" -> ProtocolVersion.v1_16_1;
+            case "1.16" -> ProtocolVersion.v1_16;
+            case "1.15.2" -> ProtocolVersion.v1_15_2;
+            case "1.15.1" -> ProtocolVersion.v1_15_1;
+            case "1.15" -> ProtocolVersion.v1_15;
+            case "1.14.4" -> ProtocolVersion.v1_14_4;
+            case "1.14.3" -> ProtocolVersion.v1_14_3;
+            case "1.14.2" -> ProtocolVersion.v1_14_2;
+            case "1.14.1" -> ProtocolVersion.v1_14_1;
+            case "1.14" -> ProtocolVersion.v1_14;
+            case "1.13.2" -> ProtocolVersion.v1_13_2;
+            case "1.13.1" -> ProtocolVersion.v1_13_1;
+            case "1.13" -> ProtocolVersion.v1_13;
+            case "1.12.2" -> ProtocolVersion.v1_12_2;
+            case "1.12.1" -> ProtocolVersion.v1_12_1;
+            case "1.12" -> ProtocolVersion.v1_12;
+            case "1.11.2", "1.11.1" -> ProtocolVersion.v1_11_1;
+            case "1.11" -> ProtocolVersion.v1_11;
+            case "1.10.2", "1.10.1", "1.10" -> ProtocolVersion.v1_10;
+            case "1.9.4", "1.9.3" -> ProtocolVersion.v1_9_3;
+            case "1.9.2" -> ProtocolVersion.v1_9_2;
+            case "1.9.1" -> ProtocolVersion.v1_9_1;
+            case "1.9" -> ProtocolVersion.v1_9;
+            case "1.8.9", "1.8.8", "1.8.7", "1.8.6", "1.8.5", "1.8.4", "1.8.3", "1.8.2", "1.8.1", "1.8" -> ProtocolVersion.v1_8;
+            case "1.7.10", "1.7.9", "1.7.8", "1.7.7", "1.7.6" -> ProtocolVersion.v1_7_6;
+            case "1.7.5", "1.7.4", "1.7.3", "1.7.2" -> ProtocolVersion.v1_7_2;
+            default -> ProtocolVersion.UNKNOWN;
+        };
     }
 
 
