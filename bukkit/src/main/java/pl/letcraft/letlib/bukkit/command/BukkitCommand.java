@@ -73,7 +73,7 @@ public abstract class BukkitCommand implements CommandExecutor {
     public void register(JavaPlugin plugin) {
         final PluginCommand command = plugin.getCommand(this.name);
         if (command == null) {
-            throw new NullPointerException("Provided plugin do not have command " + this.name + "!");
+            throw new NullPointerException("Provided plugin does not have command " + this.name + "!");
         }
     }
 
