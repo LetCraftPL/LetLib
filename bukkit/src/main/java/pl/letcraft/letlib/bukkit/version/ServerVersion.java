@@ -13,7 +13,6 @@ public final class ServerVersion {
     public static ProtocolVersion getProtocolVersion() {
         final String version = Bukkit.getMinecraftVersion();
         return ProtocolVersion.fromMinecraftVersion(version);
-
     }
 
 
