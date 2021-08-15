@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pl.letcraft</groupId>
-    <artifactId>LetLib</artifactId>
+    <artifactId>letlib</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -49,5 +49,12 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>letcraft-repo</id>
+            <url>https://repo.letcraft.pl/releases</url>
+        </repository>
+    </distributionManagement>
 
 </project>
