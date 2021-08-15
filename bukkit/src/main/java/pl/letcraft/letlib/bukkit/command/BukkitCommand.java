@@ -75,7 +75,7 @@ public abstract class BukkitCommand implements CommandExecutor {
 
     public void unregister(CommandMap commandMap) {
         final Command command = commandMap.getCommand(this.name);
-        if(command == null) {
+        if (command == null) {
             throw new NullPointerException("Command is not registered in provided command map!");
         }
 
@@ -85,7 +85,11 @@ public abstract class BukkitCommand implements CommandExecutor {
     @Nullable
     protected BukkitSubCommand getSubCommand(String name) {
         for (BukkitSubCommand subCommand : subCommands) {
-            if(subCommand.getName().equalsIgnoreCase(name)) {
+            if (subCommand.getName().equalsIgnoreCase(name)) {
+                return subCommand;
+            }
+
+            if (subCommand.getSubCommandOptions().aliases().contains(name.toLowerCase())) {
                 return subCommand;
             }
         }
