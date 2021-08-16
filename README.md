@@ -15,3 +15,11 @@ Utility library. Created for LetCraft.pl
   <artifactId>letlib-bukkit</artifactId>
   <version>1.0.0</version>
 </dependency>
+
+
+<!-- Bungee -->
+<dependency>
+  <groupId>pl.letcraft</groupId>
+  <artifactId>letlib-bungee</artifactId>
+  <version>1.0.0</version>
+</dependency>
