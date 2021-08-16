@@ -13,7 +13,7 @@ Utility library. Created for LetCraft.pl
 <dependency>
   <groupId>pl.letcraft</groupId>
   <artifactId>letlib-bukkit</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
 
 
@@ -21,5 +21,5 @@ Utility library. Created for LetCraft.pl
 <dependency>
   <groupId>pl.letcraft</groupId>
   <artifactId>letlib-bungee</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
 </dependency>
