@@ -17,6 +17,7 @@
     <modules>
         <module>core</module>
         <module>bukkit</module>
+        <module>bungee</module>
     </modules>
 
     <build>
