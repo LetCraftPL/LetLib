@@ -1,4 +1,4 @@
-package pl.letcraft.letlib.command;
+package pl.letcraft.letlib.bukkit.command;
 
 import java.util.Collections;
 import java.util.List;

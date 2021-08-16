@@ -1,4 +1,4 @@
-package pl.letcraft.letlib.command;
+package pl.letcraft.letlib.bukkit.command;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
