@@ -4,6 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 public enum ProtocolVersion {
 
+    v1_18(757, "1.18 - 1.18.1"),
     v1_17_1(756, "1.17.1"),
     v1_17(755, "1.17"),
     v1_16_4(754, "1.16.4 - 1.16.5"),
@@ -58,6 +59,7 @@ public enum ProtocolVersion {
 
     public static ProtocolVersion fromMinecraftVersion(@NotNull final String version) {
         return switch (version) {
+            case "1.18", "1.18.1" -> ProtocolVersion.v1_18;
             case "1.17.1" -> ProtocolVersion.v1_17_1;
             case "1.17" -> ProtocolVersion.v1_17;
             case "1.16.5", "1.16.4" -> ProtocolVersion.v1_16_4;
