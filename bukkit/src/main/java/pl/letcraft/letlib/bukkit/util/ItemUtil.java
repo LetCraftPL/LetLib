@@ -1,5 +1,6 @@
 package pl.letcraft.letlib.bukkit.util;
 
+import de.tr7zw.changeme.nbtapi.NBTItem;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
@@ -19,6 +20,11 @@ public final class ItemUtil {
                 continue;
             }
 
+            NBTItem nbtItem = new NBTItem(item);
+            if (nbtItem.getBoolean("special")) {
+                continue;
+            }
+
             amount += item.getAmount();
         }
         return amount;
@@ -29,7 +35,13 @@ public final class ItemUtil {
             if (amount <= 0) {
                 break;
             }
+
             if (item == null || item.getType() != material) {
+                continue;
+            }
+
+            NBTItem nbtItem = new NBTItem(item);
+            if (nbtItem.getBoolean("special")) {
                 continue;
             }
 
